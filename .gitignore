@@ -7,10 +7,10 @@
 *.sqlite3
 
 # Documents #
-*.pdf
-*.txt
-*.docx
-*.doc
+#*.pdf
+#*.txt
+#*.docx
+#*.doc
 
 # Serialized data #
 *.json

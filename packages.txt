@@ -1,0 +1,7 @@
+haystack-ai
+sentence-transformers
+llama-cpp-haystack
+chroma-haystack
+pypdf
+markdown-it-py
+mdit_plain

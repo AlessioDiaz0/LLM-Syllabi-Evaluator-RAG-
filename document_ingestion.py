@@ -32,7 +32,7 @@ def run():
             "document_embedder",
             SentenceTransformersDocumentEmbedder(
                 model = 'sentence-transformers/all-mpnet-base-v2',
-                device = ComponentDevice(device), #ensures embedder runs on gpu if available
+                device = ComponentDevice(device), #ensures embedder runs on gpu if available # type: ignore
                 batch_size = 32,
                 normalize_embeddings = False
             )
@@ -88,11 +88,11 @@ def run():
 
     doc_count_1, document_guideline_pipeline = create_document_pipeline("ChromaDB/guideline_vector")
     document_guideline_pipeline.run({"file_type_router": {"sources": source_guideline_folder}})
-    print("Processed: ", doc_count_1.count_documents(), "files")
+    print("Processed: ", doc_count_1.count_documents(), "file(s)")
 
     doc_count_2, document_input_pipeline = create_document_pipeline("ChromaDB/input_vector")
     document_input_pipeline.run({"file_type_router": {"sources": source_input_folder}})
-    print("Processed: ", doc_count_2.count_documents(), "files")
+    print("Processed: ", doc_count_2.count_documents(), "file(s)")
 
 
 def list_files_in_folder(folder_path):
