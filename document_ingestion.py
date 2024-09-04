@@ -23,10 +23,10 @@ def run():
     source_guideline_folder = list_files_in_folder("documents/syllabus_guideline")
     source_input_folder = list_files_in_folder("documents/syllabus_input")
 
+    #
     def create_document_pipeline(persist_path):
         #Initializing each component of the Pipeline
         document_store = ChromaDocumentStore(persist_path = persist_path)
-
         document_pipeline = Pipeline()
         document_pipeline.add_component(
             "document_embedder",
@@ -86,11 +86,13 @@ def run():
 
         return document_store, document_pipeline
 
-    doc_count_1, document_guideline_pipeline = create_document_pipeline("ChromaDB/guideline_vector")
+    #guideline_vector
+    doc_count_1, document_guideline_pipeline = create_document_pipeline("ChromaDB")
     document_guideline_pipeline.run({"file_type_router": {"sources": source_guideline_folder}})
     print("Processed: ", doc_count_1.count_documents(), "file(s)")
 
-    doc_count_2, document_input_pipeline = create_document_pipeline("ChromaDB/input_vector")
+    #input_vector
+    doc_count_2, document_input_pipeline = create_document_pipeline("ChromaDB")
     document_input_pipeline.run({"file_type_router": {"sources": source_input_folder}})
     print("Processed: ", doc_count_2.count_documents(), "file(s)")
 
