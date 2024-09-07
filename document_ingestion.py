@@ -58,11 +58,10 @@ def run():
         #Possibility of clean out regex patterns "remove_regex: Optional[str] = None"
         document_pipeline.add_component("document_cleaner", DocumentCleaner(remove_regex = None))
 
-        #Splits document into a list of paragraphs. 
-        #This helps to fit into maximum text length of language models and speed up the process
+        #Document splitter performs best with default settings
         document_pipeline.add_component(
             "document_splitter",
-            DocumentSplitter(split_by = "passage"))
+            DocumentSplitter())
 
         #join_mode has also the possibility of concatenation from multiple documents and discard any duplicates
         document_pipeline.add_component(

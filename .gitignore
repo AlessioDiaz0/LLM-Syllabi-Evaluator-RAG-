@@ -3,14 +3,14 @@
 
 # Generator Model file and ChromaDB data #
 *.gguf
-#*.bin
-#*.sqlite3
+*.bin
+*.sqlite3
 
 # Documents #
-#*.pdf
+*.pdf
 #*.txt
-#*.docx
-#*.doc
+*.docx
+*.doc
 
 # Serialized data #
 *.json

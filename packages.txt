@@ -1,7 +1,8 @@
 haystack-ai
 sentence-transformers
-llama-cpp-haystack
+ollama-haystack
 chroma-haystack
 pypdf
 markdown-it-py
 mdit_plain
+transformers[torch]
