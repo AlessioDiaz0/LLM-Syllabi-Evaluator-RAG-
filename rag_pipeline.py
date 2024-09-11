@@ -8,6 +8,8 @@ from haystack.utils import ComponentDevice
 from haystack_integrations.components.generators.ollama import OllamaGenerator
 from haystack_integrations.components.retrievers.chroma import ChromaEmbeddingRetriever
 
+from utils import save_to_json
+
 def run():
     device = "cuda:0" if torch.cuda.is_available() else "cpu" #for text embedder
 
@@ -18,6 +20,8 @@ def run():
 
     prompt_template = get_prompt()
 
+    #more information on parameterization can be found on
+    #https://github.com/ollama/ollama/blob/main/docs/modelfile.md#valid-parameters-and-values
     generator = OllamaGenerator(
         model="llama3.1",
         url = "http://localhost:11434/api/generate",
@@ -56,7 +60,7 @@ def run():
         "Output examples:\n"
         "Perfect syllabus:\nImportant:\n- None\nMinor:\n- None\n"
         "Other syllabus:\nImportant:\n- Office hours are missing\n- Textbook is missing\n"
-        "Minor:\n- Could add links to school resources"
+        "Minor:\n- Could add links to school resources\n"
         "Wrong outputs will use: could be more detailed or specific"
     )
     result = rag_pipeline.run(
@@ -67,8 +71,7 @@ def run():
         )
     
     print(f"Document Store contains: {document_store.count_documents()} documents.")
-    generated_answer = result['answer_builder']['answers'][0]
-    print(generated_answer.data)
+    save_to_json(result)
 
 def get_prompt():
     prompt = """
