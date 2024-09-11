@@ -1,0 +1,18 @@
+{
+  "model:": "llama3.1",
+  "generated_answer": "Important:\n\n- Contact Information for the Instructor (specifically, a physical office address)\n- Course Schedule (should include start and end dates of the semester)\n\nMinor:\n\n- Links to school resources (e.g. counseling services, tutoring centers) \n- A note about the course's online platform (e.g. where students can access readings and resources)",
+  "file(s)_used:": [
+    "documents\\syllabus_guideline\\sample_guideline.pdf",
+    "documents\\syllabus_input\\sample_syllabus.pdf"
+  ],
+  "score(s)": [
+    0.5910083450818917,
+    1.343068781346221
+  ],
+  "measured_latency": 3.721347589064689e-08,
+  "vector(s)_size:": [
+    768,
+    768
+  ],
+  "done_reason": "stop"
+}
