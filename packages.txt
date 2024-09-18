@@ -1,8 +1,8 @@
-haystack-ai
-sentence-transformers
-ollama-haystack
-chroma-haystack
-pypdf
-markdown-it-py
-mdit_plain
+haystack-ai==2.3.0
+sentence-transformers==3.0.1
+ollama-haystack==0.0.7
+chroma-haystack==0.21.1
+pypdf==4.3.1
+markdown-it-py==3.0.0
+mdit_plain==1.0.1
 transformers[torch]
