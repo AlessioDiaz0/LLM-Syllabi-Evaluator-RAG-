@@ -1,29 +1,28 @@
+# LLM-Syllabi-Evaluator-RAG-
+
+To run the project follow these steps below:
+
 ### 1. Conda Environment
 
-Create a new Conda environment named `ENVNAME` with Python 3.10. Open your terminal or command prompt and run:
+-To download Conda follow use the [Conda Website](https://conda.io/projects/conda/en/latest/user-guide/install/index.html), and ensure to initialize the program using `conda init`
+
 Create a new Conda environment named `NAME_ENVIRONMENT` with Python 3.10. Open your terminal or command prompt and run:
 
 ```bash
-conda create -n ENVNAME python=3.10
 conda create -n NAME_ENVIRONMENT python=3.10
 ```
-Then activate the Conda enviroment:
+
 Then activate the Conda environment:
 
 ```bash
-conda activate ENVNAME
 conda activate NAME_ENVIRONMENT
 ```
 
-### 2. Install Required Python Packages
-@@ -35,3 +35,77 @@ Ensure the following prerequisites are installed on your system:
-  - **Linux:** Follow the [official Linux installation guide](https://developer.nvidia.com/cuda-downloads?target_os=Linux) provided by NVIDIA, selecting the appropriate version and distribution.
-  - **macOS:** CUDA support for macOS is limited and may not be available for newer versions. Check the [CUDA Toolkit archive](https://developer.nvidia.com/nvidia-cuda-toolkit-developer-tools-mac-hosts) for compatibility.
-  - **Windows:** Use the [official Windows installation guide](https://developer.nvidia.com/cuda-downloads?target_os=Windows) to download and install the toolkit suitable for your system.
+NOTE: To leave the enviroment use the command `conda deactivate`
 
-### 4. Install Packages
+### 2. Install Python Packages
 
-Install required Python packages listed in `packages.txt`:
+Install required Python packages listed in `packages.txt` in your new environment:
 
 ```bash
 pip install -r packages.txt
@@ -31,23 +30,26 @@ pip install -r packages.txt
 
 NOTE: It is important to ensure all the version are kept to the original versions, otherwise problems with mismatched tensors may arise.
 
-### 5. Install `ollama`
+### 3. Install `ollama`
 
-To install ollama follow the instructions in this repository [Git ollama](https://github.com/ollama/ollama).
+To install ollama follow the instructions in this repository [Git ollama](https://github.com/ollama/ollama) or [Ollama Download](https://ollama.com/download).
 
 Alternatively follow the instructions in this link: https://www.gpu-mart.com/blog/how-to-run-llama-3-1-8b-with-ollama.
 
-### 6. Install `ollama-haystack`
+---
 
-Install the `ollama-haystack` package:
+### ONLY FOR NVIDIA GPUs
 
-```bash
-pip install ollama-haystack==0.0.7
-```
+### 1. Ensure Prerequisites are Installed
 
-NOTE: It is important to ensure all the version are kept to the original version, otherwise problems with mixed match tensors may rise.
+Ensure the following prerequisites are installed on your system:
 
-### 7. Install PyTorch with CUDA
+- **NVIDIA CUDA Toolkit 11.8:** Required for GPU support and compiling CUDA packages. Installation methods vary by operating system:
+  - **Linux:** Follow the [official Linux installation guide](https://developer.nvidia.com/cuda-downloads?target_os=Linux) provided by NVIDIA, selecting the appropriate version and distribution.
+  - **macOS:** CUDA support for macOS is limited and may not be available for newer versions. Check the [CUDA Toolkit archive](https://developer.nvidia.com/nvidia-cuda-toolkit-developer-tools-mac-hosts) for compatibility.
+  - **Windows:** Use the [official Windows installation guide](https://developer.nvidia.com/cuda-downloads?target_os=Windows) to download and install the toolkit suitable for your system.
+
+### 2. Install PyTorch with CUDA
 
 It is recommended to install PyTorch with CUDA to utilize GPU acceleration for efficiency. Install [PyTorch](https://pytorch.org/get-started/locally/) by configuring your download to your machine and running the command given by the GUI under the 'Start Locally section'.
 
