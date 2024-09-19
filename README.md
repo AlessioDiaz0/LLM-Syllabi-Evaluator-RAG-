@@ -38,7 +38,7 @@ Alternatively follow the instructions in this link: https://www.gpu-mart.com/blo
 
 ---
 
-### ONLY FOR NVIDIA GPUs
+### NVIDIA GPUs ONLY
 
 ### 1. Ensure Prerequisites are Installed
 
