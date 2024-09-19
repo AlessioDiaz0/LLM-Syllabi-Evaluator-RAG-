@@ -36,6 +36,12 @@ To install Ollama follow the instructions in this repository [Git Ollama](https:
 
 Alternatively follow the instructions in this link: https://www.gpu-mart.com/blog/how-to-run-llama-3-1-8b-with-ollama.
 
+After installing run the following command to ensure all packages have been installed properly
+
+```bash
+ollama run llama3.1
+```
+
 ---
 
 ### NVIDIA GPUs ONLY
