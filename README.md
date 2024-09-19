@@ -30,9 +30,9 @@ pip install -r packages.txt
 
 NOTE: It is important to ensure all the version are kept to the original versions, otherwise problems with mismatched tensors may arise.
 
-### 3. Install `ollama`
+### 3. Install `Ollama`
 
-To install ollama follow the instructions in this repository [Git ollama](https://github.com/ollama/ollama) or [Ollama Download](https://ollama.com/download).
+To install Ollama follow the instructions in this repository [Git Ollama](https://github.com/ollama/ollama) or [Ollama Download](https://ollama.com/download).
 
 Alternatively follow the instructions in this link: https://www.gpu-mart.com/blog/how-to-run-llama-3-1-8b-with-ollama.
 
@@ -59,7 +59,7 @@ It is recommended to install PyTorch with CUDA to utilize GPU acceleration for e
 
 To ensure that everything was properly installed follow these steps
 
-1. Delete the current ChromaDB directory, then ensure that the sample_guideline.pdf & sample_syllabus.pdf files exist in the `documents` folder.
+1. **Delete** the current ChromaDB directory, then ensure that the sample_guideline.pdf & sample_syllabus.pdf files exist in the `documents` folder.
 
 2. **Run** the `document_ingestion.py` file. A new ChromaDB directory with all the documents will be created and it will be ready to be used by the RAG pipeline.
  ```bash
