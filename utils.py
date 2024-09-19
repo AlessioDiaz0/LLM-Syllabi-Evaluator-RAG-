@@ -2,7 +2,7 @@ import os
 import json
 import time
 
-SAVING_DIR = 'documents/generated_output'
+SAVING_DIR = 'documents\\generated_output'
 
 def save_to_json(result):
     data = get_data(result)

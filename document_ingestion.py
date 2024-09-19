@@ -58,10 +58,10 @@ def run():
         #Possibility of clean out regex patterns "remove_regex: Optional[str] = None"
         document_pipeline.add_component("document_cleaner", DocumentCleaner(remove_regex = None))
 
-        #Document splitter performs best with default settings
+        #Document splitter performs best split_by 'word' or 'passage' depening on the generative model
         document_pipeline.add_component(
             "document_splitter",
-            DocumentSplitter())
+            DocumentSplitter(split_by= 'passage'))
 
         #join_mode has also the possibility of concatenation from multiple documents and discard any duplicates
         document_pipeline.add_component(

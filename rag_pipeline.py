@@ -47,10 +47,8 @@ def run():
     rag_pipeline.connect("embedder_retriever", "answer_builder.documents")
     rag_pipeline.connect("embedder_retriever.documents", "answer_builder.documents")
 
-    #rag_pipeline.draw("diagrams/rag_pipeline.png") #generates a diagram of the pipeline in a png
-
-    #Based on the Sample Guideline did the syllabus sample follow all the requirements
-    #Give feedback on the sample_syllabus using the two category lists
+    rag_pipeline.draw("diagrams/rag_pipeline.png") #generates a diagram of the pipeline in a png
+    
     comfirmation_question = (
         "List everything in two categories: important and minor. "
         "Important: anything that is missing from the guidelines or requirements. "
