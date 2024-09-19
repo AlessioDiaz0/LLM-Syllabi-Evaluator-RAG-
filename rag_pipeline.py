@@ -24,8 +24,9 @@ def run():
     #https://github.com/ollama/ollama/blob/main/docs/modelfile.md#valid-parameters-and-values
     generator = OllamaGenerator(
         model="llama3.1",
-        url = "http://localhost:11434/api/generate",
-        generation_kwargs={"temperature": 0.1, "top_k": 20, "top_p": 0.5 }
+        url="http://localhost:11434/api/generate",
+        generation_kwargs={"temperature": 0.1, "top_k": 20, "top_p": 0.5},
+        timeout=300 #timeout increased for slower devices
     )
 
     text_embedder.warm_up()
